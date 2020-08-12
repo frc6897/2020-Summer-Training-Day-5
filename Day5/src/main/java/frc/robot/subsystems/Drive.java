@@ -12,6 +12,7 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import com.revrobotics.CANEncoder;
 import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
+import frc.robot.Constants;
 
 public class Drive extends SubsystemBase {
   /**
@@ -38,7 +39,7 @@ public class Drive extends SubsystemBase {
   }
 
   public void goTenFeet() {
-    
+
   }
   @Override
   public void periodic() {

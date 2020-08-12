@@ -27,7 +27,7 @@ public class RobotContainer {
   public static Drive m_Drive = new Drive();
 
   private final ExampleCommand m_autoCommand = new ExampleCommand(m_exampleSubsystem);
-  public static GoTenFeet m_goTenFeet = new GoTenFeet();
+  public static GoTenFeet m_goTenFeet = new GoTenFeet(); // no parameter for constructor written
 
 
   /**
