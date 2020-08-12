@@ -37,6 +37,9 @@ public class Drive extends SubsystemBase {
 
   }
 
+  public void goTenFeet() {
+    
+  }
   @Override
   public void periodic() {
     // This method will be called once per scheduler run
