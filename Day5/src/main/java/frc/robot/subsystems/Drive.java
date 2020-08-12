@@ -18,15 +18,22 @@ public class Drive extends SubsystemBase {
    * Creates a new Drive.
    */
   private CANSparkMax motorA = new CANSparkMax(0, MotorType.kBrushless);
-  private CANSparkMax motorB = new CANSparkMax(1, MotorType.kBrushless);
+  
   
   private CANSparkMax motorY = new CANSparkMax(2, MotorType.kBrushless);
-  private CANSparkMax motorZ = new CANSparkMax(3, MotorType.kBrushless);
+  
   
   private CANEncoder encoder1 = new CANEncoder(motorA);
   private CANEncoder encoder2 = new CANEncoder(motorY);
 
+  
   public Drive() {
+    motorA = new CANSparkMax(0, MotorType.kBrushless);
+    
+    motorY = new CANSparkMax(2, MotorType.kBrushless);
+    
+    encoder1 = new CANEncoder(motorA);
+    encoder2 = new CANEncoder(motorY);
 
   }
 
