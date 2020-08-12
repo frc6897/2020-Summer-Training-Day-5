@@ -8,12 +8,20 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import com.revrobotics.CANSparkMax;
+import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
 public class Drive extends SubsystemBase {
   /**
    * Creates a new Drive.
    */
-  private CANSparkMAX motorA = new CANSparkMAX(0);
+  private CANSparkMax motorA = new CANSparkMax(0, MotorType.kBrushless);
+  private CANSparkMax motorB = new CANSparkMax(1, MotorType.kBrushless);
+  
+  private CANSparkMax motorY = new CANSparkMax(2, MotorType.kBrushless);
+  private CANSparkMax motorZ = new CANSparkMax(3, MotorType.kBrushless);
+  
+
   public Drive() {
 
   }
