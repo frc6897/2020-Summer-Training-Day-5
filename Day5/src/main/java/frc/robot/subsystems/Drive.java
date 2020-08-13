@@ -38,7 +38,11 @@ public class Drive extends SubsystemBase {
 
   }
 
+  //while loop is used to minimize delay
   public void goTenFeet() {
+    while(encoder1.getPosition()*1024<(120/2*Math.PI*5)*1024 && encoder2.getPosition()*1024<(120/2*Math.PI*5)*1024) {    //constant doesn't work
+
+    }
 
   }
   @Override
