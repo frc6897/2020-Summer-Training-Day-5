@@ -44,6 +44,10 @@ public class Drive extends SubsystemBase {
     driverBase.tankDrive(1,1);
     }
 
+
+  public void stop() {
+    driverBase.tankDrive(0,0);
+  }
   }
   @Override
   public void periodic() {
