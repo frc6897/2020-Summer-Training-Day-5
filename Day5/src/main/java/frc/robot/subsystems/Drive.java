@@ -19,13 +19,15 @@ public class Drive extends SubsystemBase {
   /**
    * Creates a new Drive.
    */
-  private CANSparkMax motorA = new CANSparkMax(0, MotorType.kBrushless);
-  private CANSparkMax motorZ = new CANSparkMax(2, MotorType.kBrushless);
+  private CANSparkMax motorA = new CANSparkMax(0, MotorType.kBrushless); // left NEO
+  private CANSparkMax motorZ = new CANSparkMax(2, MotorType.kBrushless); // right NEO 
   
-  private CANEncoder encoder1 = new CANEncoder(motorA);
+  private CANEncoder encoder1 = new CANEncoder(motorA);             
   private CANEncoder encoder2 = new CANEncoder(motorZ);
 
   private DifferentialDrive driverBase = new DifferentialDrive(motorA, motorZ);
+  
+  private Constants Constant = new Constants();
 
   
   public Drive() {
@@ -33,21 +35,22 @@ public class Drive extends SubsystemBase {
     
     motorZ = new CANSparkMax(2, MotorType.kBrushless);
     
-    encoder1 = new CANEncoder(motorA);
+    encoder1 = new CANEncoder(motorA);   
     encoder2 = new CANEncoder(motorZ);
 
   }
 
-  //while loop is used to minimize delay
+  //while loop is used instead of if loop to minimize delay
   public void goTenFeet() {
-    while(encoder1.getPosition()*1024<(120/2*Math.PI*5)*1024 && encoder2.getPosition()*1024<(120/2*Math.PI*5)*1024) {    //constant doesn't work
+    while(encoder1.getPosition()*1024 < Constant.TEN_FEET_COUNT && encoder2.getPosition()*1024< Constant.TEN_FEET_COUNT) {    
     driverBase.tankDrive(1,1);
     }
+    stop();   //stops motor when destination reached
+  }
 
-
+  //for stopping motor
   public void stop() {
     driverBase.tankDrive(0,0);
-  }
   }
   @Override
   public void periodic() {
