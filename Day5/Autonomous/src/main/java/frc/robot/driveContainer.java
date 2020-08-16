@@ -33,10 +33,8 @@ public class RobotContainer {
    */
   public RobotContainer() {
     // Configure the button bindings
-    drivebase.arcadeDrive(joy1.getRawAxis(5), joy1.getRawAxis(1), joy1.getRawButton(1));
-    configureButtonBindings();
     if (joy1.whenPressed(true)) {
-      driveContainer.m_autoSubsystems.getEncoder();
+      driveDistance();
     }
   }
 
@@ -47,6 +45,8 @@ public class RobotContainer {
    * {@link edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
   private void configureButtonBindings() {
+    drivebase.tankDrive(joy1.getRawAxis(5), joy1.getRawAxis(2));
+    configureButtonBindings();
   }
 
 
@@ -57,7 +57,6 @@ public class RobotContainer {
    */
   public Command getAutonomousCommand() {
     // An ExampleCommand will run in autonomous
-    driveContainer.setDefaultCommand(new arcadeDrive());
     return m_autoSubsystems();
     return m_autoCommand;
   }
