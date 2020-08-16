@@ -28,7 +28,6 @@ public class RobotContainer {
   private final ExampleCommand m_autoCommand = new ExampleCommand(m_exampleSubsystem);
   private static AutoSubsystem m_autoSubsystems = new AutoSubsystem();
   private Joystick joy1 = new Joystick(0);
-  private DifferentialDrive drivebase = new DifferentialDrive(drivebaseLeft, drivebaseRight);
   /**
    * The container for the robot.  Contains subsystems, OI devices, and commands.
    */
@@ -36,7 +35,6 @@ public class RobotContainer {
     // Configure the button bindings
     drivebase.arcadeDrive(joy1.getRawAxis(5), joy1.getRawAxis(1), joy1.getRawButton(1));
     configureButtonBindings();
-    driveContainer.setDefaultCommand(new arcadeDrive());
     if (joy1.whenPressed(true)) {
       driveContainer.m_autoSubsystems.getEncoder();
     }
@@ -59,6 +57,8 @@ public class RobotContainer {
    */
   public Command getAutonomousCommand() {
     // An ExampleCommand will run in autonomous
+    driveContainer.setDefaultCommand(new arcadeDrive());
+    return m_autoSubsystems();
     return m_autoCommand;
   }
 }
