@@ -33,6 +33,7 @@ public class RobotContainer {
    */
   public RobotContainer() {
     // Configure the button bindings
+    configureButtonBindings();
     if (joy1.whenPressed(true)) {
       driveDistance();
     }
@@ -46,7 +47,6 @@ public class RobotContainer {
    */
   private void configureButtonBindings() {
     drivebase.tankDrive(joy1.getRawAxis(5), joy1.getRawAxis(2));
-    configureButtonBindings();
   }
 
 
