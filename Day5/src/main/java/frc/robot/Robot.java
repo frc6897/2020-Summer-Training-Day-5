@@ -13,7 +13,9 @@ import edu.wpi.first.wpilibj2.command.CommandScheduler;
 
 /*
 FEEDBACK
-- Looks good
+- Looks good, but if you're going to use an if statement in the subsystem to set a condition on the distance, then you'll need to schedule the autnomous command
+  periodically
+    - To do this, just put m_autonomousCommand.schedule(); in the autonomousPeriodic() method
  */
 
 
