@@ -16,4 +16,7 @@ package frc.robot;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
+    
+    public final int WHEEL_RADIUS = 5;
+    public final double TEN_FEET_COUNT = 120/2*Math.PI*WHEEL_RADIUS*1024;
 }
