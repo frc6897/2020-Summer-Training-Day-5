@@ -12,6 +12,7 @@ public class Drive extends SubsystemBase{
 	private Ultrasonic us = new Ultrasonic(Constants.US_PORT_1,Constants.US_PORT_2);
 	private int encCt;
 	public Drive(int distance){
+		dist.setAutomaticMode(true);
 		encCt = (12*distance)/(2*Constants.RD*Math.PI)*enc.getCountsPerRevolution();
 		for(int i = 0;i<6;i++)
 		{
