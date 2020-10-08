@@ -25,7 +25,7 @@ public class Drive extends SubsystemBase{
 		while(enc[Constants.fLMotor].getPosition()<encCt)
 		{
 			motors[Constants.FLMOTOR].set(1);
-			motors[Constants.FRMOtOR].set(1);
+			motors[Constants.FRMOTOR].set(1);
 		}
 	}
 	public void stop(){
