@@ -20,10 +20,10 @@ public final class Constants {
   public static int US_PORT_1 = 6;
   public static int US_PORT_2 = 7;
   public static int RD = 5;
-  public static int fLMotor = 0;
-  public static int fRMotor = 1;
-  public static int mLMotor = 2;
-  public static int mRMotor = 3;
-  public static int rLMotor = 4;
-  public static int rRMotor = 5;
+  public static int FLMOTOR = 0;
+  public static int FRMOTOR = 1;
+  public static int MLMOTOR = 2;
+  public static int MRMOTOR = 3;
+  public static int RLMOTOR = 4;
+  public static int RRMOTOR = 5;
 }
