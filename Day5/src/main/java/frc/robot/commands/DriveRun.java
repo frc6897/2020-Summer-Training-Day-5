@@ -4,7 +4,7 @@ import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.RobotContainer;
 import frc.robot.subsystems.Drive;
 
-public class DriveRun{
+public class DriveRun extends CommandBase{
 	public DriveRun()
 	{
 		addRequirements(RobotContainer.m_Drive);
