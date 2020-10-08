@@ -17,6 +17,8 @@ package frc.robot;
  */
 public final class Constants {
   public static int[] MOTOR_PORT = {0,1,2,3,4,5};
+  public static int US_PORT_1 = 6;
+  public static int US_PORT_2 = 7;
   public static int RD = 5;
   public static int fLMotor = 0;
   public static int fRMotor = 1;
